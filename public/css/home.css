@@ -1,0 +1,147 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.menu .step {
+  width: 90%;
+  max-width: 500px;
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.menu .step:not(.active) {
+  display: none;
+}
+
+.menu input, .menu select {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.menu input:focus, .menu select:focus {
+  border: 1px solid #66afe9;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+  outline: none;
+}
+
+.menu button {
+  width: 100%;
+  height: 35px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu button[data-color='green'] {
+  background-color: #5cb85c;
+  border: 1px solid #4cae4c;
+}
+
+.menu button[data-color='green']:hover, .menu button[data-color='green']:focus {
+  background-color: #449d44;
+  border: 1px solid #398439;
+}
+
+.menu button[data-color='blue'] {
+  background-color: #5bc0de;
+  border: 1px solid #46b8da;
+}
+
+.menu button[data-color='blue']:hover, .menu button[data-color='blue']:focus {
+  background-color: #31b0d5;
+  border: 1px solid #269abc;
+}
+
+.menu button[data-color='gray'] {
+  background-color: #DCDCDC;
+  border: 1px solid #C8C8C8;
+}
+
+.menu button[data-color='gray']:hover, .menu button[data-color='gray']:focus {
+  background-color:	#C0C0C0;
+  border: 1px solid	#B8B8B8;
+}
+
+.menu .step div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu .step div button {
+  width: 40%;
+}
+
+.menu .step div input {
+  width: 55%;
+}
+
+.menu .step div select {
+  width: 40%;
+}
+
+.menu .content {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.menu .content p {
+  width: 100%;
+  border-bottom: 1px solid black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: transform 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu .content p:hover, .menu .content p:focus {
+  transform: translateX(-5px);
+}
+
+.menu .content p:last-child {
+  border: none !important;
+}
+
+.refresh {
+  width: 50px;
+  display: block;
+  transition: transform 0.2s;
+  cursor: pointer;
+  margin: auto;
+}
+
+.refresh:hover, .refresh:focus {
+  transform: scale(1.1) rotate(360deg);
+}
+
+.refresh:active {
+  transform: scale(1) rotate(360deg);
+}

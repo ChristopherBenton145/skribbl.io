@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/play.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="../js/play.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skribbl.io</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon/favicon.png'>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <a href="../"><img class="logo" src="../assets/images/logo.gif" alt="Logo" /></a>
+    <div class="container">
+      <div class="content">
+        <canvas id="canvas"></canvas>
+        <div class="toolkit">
+          <div>
+            <input class="color" onchange="changeColor()" type="color" name="color" />
+            <svg class="trash" onclick="clearCanvas()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Trash</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+          </div>
+          <h4 class="time">00:00</h4>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="context"></div>
+        <div class="text">
+          <input type="text" name="message" placeholder="Type your guess here..." autocomplete="off" />
+          <button onclick="send()">Send</button>
+        </div>
+      </div>
+      <div class="users"></div>
+    </div>
+  </body>
+</html>
